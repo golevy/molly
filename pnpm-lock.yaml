@@ -13,7 +13,7 @@ dependencies:
     version: 5.7.1(prisma@5.7.1)
   '@radix-ui/react-slot':
     specifier: ^1.0.2
-    version: 1.0.2(@types/react@18.2.45)(react@18.2.0)
+    version: 1.0.2(@types/react@18.2.46)(react@18.2.0)
   '@t3-oss/env-nextjs':
     specifier: ^0.7.1
     version: 0.7.1(typescript@5.3.3)(zod@3.22.4)
@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^18.17.0
     version: 18.19.3
   '@types/react':
-    specifier: ^18.2.37
-    version: 18.2.45
+    specifier: ^18.2.46
+    version: 18.2.46
   '@types/react-dom':
     specifier: ^18.2.15
     version: 18.2.18
@@ -402,7 +402,7 @@ packages:
     dependencies:
       '@prisma/debug': 5.7.1
 
-  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.45)(react@18.2.0):
+  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
     peerDependencies:
       '@types/react': '*'
@@ -412,11 +412,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.23.6
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
       react: 18.2.0
     dev: false
 
-  /@radix-ui/react-slot@1.0.2(@types/react@18.2.45)(react@18.2.0):
+  /@radix-ui/react-slot@1.0.2(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
     peerDependencies:
       '@types/react': '*'
@@ -426,8 +426,8 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.23.6
-      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.45)(react@18.2.0)
-      '@types/react': 18.2.45
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.46)(react@18.2.0)
+      '@types/react': 18.2.46
       react: 18.2.0
     dev: false
 
@@ -575,11 +575,11 @@ packages:
   /@types/react-dom@18.2.18:
     resolution: {integrity: sha512-TJxDm6OfAX2KJWJdMEVTwWke5Sc/E/RlnPGvGfS0W7+6ocy2xhDVQVh/KvC2Uf7kACs+gDytdusDSdWfWkaNzw==}
     dependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
     dev: true
 
-  /@types/react@18.2.45:
-    resolution: {integrity: sha512-TtAxCNrlrBp8GoeEp1npd5g+d/OejJHFxS3OWmrPBMFaVQMSN0OFySozJio5BHxTuTeug00AVXVAjfDSfk+lUg==}
+  /@types/react@18.2.46:
+    resolution: {integrity: sha512-nNCvVBcZlvX4NU1nRRNV/mFl1nNRuTuslAJglQsq+8ldXe5Xv0Wd2f7WTE3jOxhLH2BFfiZGC6GCp+kHQbgG+w==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
