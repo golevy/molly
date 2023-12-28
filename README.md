@@ -14,3 +14,5 @@ pnpm dev
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+- [shadcn/ui](https://ui.shadcn.com)
+- [lucide](https://lucide.dev)
