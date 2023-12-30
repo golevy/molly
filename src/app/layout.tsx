@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
+import { TailwindIndicator } from "~/components/TailwindIndicator";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +13,6 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Chat with PDF",
   description: "",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
@@ -25,11 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn("min-h-screen font-sans antialiased", inter.variable)}
+        className={cn(
+          "grainy min-h-screen font-sans antialiased",
+          inter.variable,
+        )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
           {children}
         </TRPCReactProvider>
+        <TailwindIndicator />
       </body>
     </html>
   );
