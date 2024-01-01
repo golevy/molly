@@ -153,7 +153,7 @@ export default function Home() {
                 Start asking questions
               </span>
               <span className="mt-2 text-zinc-700">
-                It&apos;s that simple. Try out Quill today - it really takes
+                It&apos;s that simple. Try out Molly today - it really takes
                 less than a minute.
               </span>
             </div>
