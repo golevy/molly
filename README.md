@@ -1,6 +1,6 @@
-# Full Stack Chat PDF
+# Chat PDF
 
-A full stack project for dialogue-based PDF interaction to improve document understanding.
+A full stack chat application for Q&A based on PDF content.
 
 ## Getting Started
 ```
