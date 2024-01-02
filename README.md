@@ -16,3 +16,4 @@ pnpm dev
 - [tRPC](https://trpc.io)
 - [shadcn/ui](https://ui.shadcn.com)
 - [lucide](https://lucide.dev)
+- [react-hot-toast](https://react-hot-toast.com)
