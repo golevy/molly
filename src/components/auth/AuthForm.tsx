@@ -10,6 +10,7 @@ import AuthInput from "~/components/auth/AuthInput";
 import { signIn } from "next-auth/react";
 import { GithubIcon } from "~/components/Icons";
 import toast from "react-hot-toast";
+import { validateInputs } from "~/lib/utils";
 
 const AuthForm = () => {
   const [name, setName] = useState("");
@@ -24,15 +25,7 @@ const AuthForm = () => {
   }, []);
 
   const login = useCallback(async () => {
-    if (email === "") {
-      toast.error("Email required");
-      return;
-    }
-
-    if (password === "") {
-      toast.error("Password required");
-      return;
-    }
+    if (!validateInputs({ email, password })) return;
 
     try {
       const result = await signIn("credentials", {
@@ -53,9 +46,13 @@ const AuthForm = () => {
   }, [email, password]);
 
   const register = useCallback(async () => {
+    if (!validateInputs({ email, name, password })) return;
+
     try {
+      toast.success("Account created successfully");
       setVariant("login");
     } catch (error) {
+      toast.error("Failed to create account");
       console.log(error);
     }
   }, [email, name, password, login]);
