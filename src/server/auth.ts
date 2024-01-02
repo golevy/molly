@@ -4,8 +4,9 @@ import {
   type DefaultSession,
   type NextAuthOptions,
 } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
+import Credentials from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
+import { compare } from "bcrypt";
 
 import { env } from "~/env";
 import { db } from "~/server/db";
@@ -51,6 +52,46 @@ export const authOptions: NextAuthOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
+    }),
+    Credentials({
+      id: "credentials",
+      name: "Credentials",
+      credentials: {
+        email: {
+          label: "Email",
+          type: "text",
+        },
+        password: {
+          label: "Password",
+          type: "password",
+        },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials.password) {
+          throw new Error("Email and password required");
+        }
+
+        const user = await db.user.findUnique({
+          where: {
+            email: credentials.email,
+          },
+        });
+
+        if (!user || !user.hashedPassword) {
+          throw new Error("Email does not exist");
+        }
+
+        const isCorrectPassword = await compare(
+          credentials.password,
+          user.hashedPassword,
+        );
+
+        if (!isCorrectPassword) {
+          throw new Error("Incorrect password");
+        }
+
+        return user;
+      },
     }),
   ],
 };

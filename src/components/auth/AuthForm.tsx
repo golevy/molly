@@ -9,6 +9,7 @@ import {
 import AuthInput from "~/components/auth/AuthInput";
 import { signIn } from "next-auth/react";
 import { GithubIcon } from "~/components/Icons";
+import toast from "react-hot-toast";
 
 const AuthForm = () => {
   const [name, setName] = useState("");
@@ -21,6 +22,43 @@ const AuthForm = () => {
       currentVariant === "login" ? "register" : "login",
     );
   }, []);
+
+  const login = useCallback(async () => {
+    if (email === "") {
+      toast.error("Email required");
+      return;
+    }
+
+    if (password === "") {
+      toast.error("Password required");
+      return;
+    }
+
+    try {
+      const result = await signIn("credentials", {
+        email,
+        password,
+        callbackUrl: "/dashboard",
+      });
+
+      if (result?.error) {
+        toast.error("Login failed");
+        console.error(result.error);
+      }
+
+      toast.success("Login successfully");
+    } catch (error) {
+      console.log(error);
+    }
+  }, [email, password]);
+
+  const register = useCallback(async () => {
+    try {
+      setVariant("login");
+    } catch (error) {
+      console.log(error);
+    }
+  }, [email, name, password, login]);
 
   return (
     <>
@@ -56,8 +94,12 @@ const AuthForm = () => {
       </div>
 
       <DialogFooter>
-        <Button className="mt-8 w-full" type="submit">
-          Login
+        <Button
+          onClick={variant === "login" ? login : register}
+          className="mt-8 w-full py-6 text-base"
+          type="submit"
+        >
+          {variant === "login" ? "Login" : "Sign up"}
         </Button>
       </DialogFooter>
 
@@ -74,7 +116,7 @@ const AuthForm = () => {
           : "Already have an account?"}
         <span
           onClick={toggleVariant}
-          className="ml-1 cursor-pointer hover:underline"
+          className="ml-1 cursor-pointer text-primary hover:underline"
         >
           {variant === "register" ? "Login" : "Create an account"}
         </span>
