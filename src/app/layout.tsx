@@ -7,6 +7,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "~/components/TailwindIndicator";
 import Navbar from "~/components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,10 +33,11 @@ export default function RootLayout({
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
+          <Toaster />
           <Navbar />
           {children}
+          <TailwindIndicator />
         </TRPCReactProvider>
-        <TailwindIndicator />
       </body>
     </html>
   );
