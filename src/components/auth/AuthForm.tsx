@@ -11,12 +11,15 @@ import { signIn } from "next-auth/react";
 import { GithubIcon } from "~/components/Icons";
 import toast from "react-hot-toast";
 import { validateInputs } from "~/lib/utils";
+import { api } from "~/trpc/react";
 
 const AuthForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [variant, setVariant] = useState("login");
+
+  const registerMutation = api.user.register.useMutation();
 
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) =>
@@ -48,13 +51,25 @@ const AuthForm = () => {
   const register = useCallback(async () => {
     if (!validateInputs({ email, name, password })) return;
 
-    try {
-      toast.success("Account created successfully");
-      setVariant("login");
-    } catch (error) {
-      toast.error("Failed to create account");
-      console.log(error);
-    }
+    await registerMutation.mutateAsync(
+      {
+        email,
+        name,
+        password,
+      },
+      {
+        onSuccess(res) {
+          if (res.success) {
+            toast.success("Account created successfully");
+            setVariant("login");
+          }
+        },
+        onError(err) {
+          toast.error("Failed to create account");
+          console.log(err);
+        },
+      },
+    );
   }, [email, name, password, login]);
 
   return (
