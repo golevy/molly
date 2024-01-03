@@ -37,14 +37,34 @@ declare module "next-auth" {
  * @see https://next-auth.js.org/configuration/options
  */
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET as string,
   callbacks: {
-    session: ({ session, user }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
-      },
-    }),
+    session({ session, token }) {
+      if (session.user) {
+        session.user.name = token.name as string;
+        session.user.id = token.id as string;
+      }
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.name = user.name;
+        token.id = user.id;
+      }
+
+      return token;
+    },
+    redirect({ url, baseUrl }) {
+      if (url.startsWith(baseUrl + "/api/auth/signout")) {
+        return baseUrl;
+      }
+
+      return url.startsWith(baseUrl) ? url : baseUrl;
+    },
+  },
+  session: {
+    strategy: "jwt",
+    maxAge: 2592000 * 3, // 3 month
   },
   adapter: PrismaAdapter(db),
   providers: [

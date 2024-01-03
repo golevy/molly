@@ -30,22 +30,28 @@ const AuthForm = () => {
   const login = useCallback(async () => {
     if (!validateInputs({ email, password })) return;
 
-    try {
-      const result = await signIn("credentials", {
-        email,
-        password,
-        callbackUrl: "/dashboard",
-      });
-
-      if (result?.error) {
+    await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    })
+      .then((res) => {
+        if (res?.error) {
+          if (res.error === "Email does not exist") {
+            toast.error("Email does not exist, please try again");
+          } else if (res.error === "Incorrect password") {
+            toast.error("Incorrect password, please try again");
+          } else {
+            toast.error(res.error);
+          }
+        } else {
+          toast.success("Login successfully");
+          window.location.href = "/dashboard";
+        }
+      })
+      .catch(() => {
         toast.error("Login failed");
-        console.error(result.error);
-      }
-
-      toast.success("Login successfully");
-    } catch (error) {
-      console.log(error);
-    }
+      });
   }, [email, password]);
 
   const register = useCallback(async () => {
