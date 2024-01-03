@@ -8,6 +8,8 @@ import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "~/components/TailwindIndicator";
 import Navbar from "~/components/Navbar";
 import { Toaster } from "react-hot-toast";
+import AuthProvider from "~/components/providers/AuthProvider";
+import { TooltipProvider } from "~/components/ui/tooltip";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,10 +35,14 @@ export default function RootLayout({
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
-          <Toaster />
-          <Navbar />
-          {children}
-          <TailwindIndicator />
+          <AuthProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Navbar />
+              {children}
+              <TailwindIndicator />
+            </TooltipProvider>
+          </AuthProvider>
         </TRPCReactProvider>
       </body>
     </html>
