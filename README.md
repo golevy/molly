@@ -14,6 +14,7 @@ pnpm dev
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+- [Zustand](https://zustand-demo.pmnd.rs/)
 - [shadcn/ui](https://ui.shadcn.com)
 - [lucide](https://lucide.dev)
 - [react-hot-toast](https://react-hot-toast.com)
