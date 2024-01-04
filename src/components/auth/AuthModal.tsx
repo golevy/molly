@@ -1,10 +1,12 @@
 import { Dialog, DialogContent } from "~/components/ui/dialog";
-import { DialogProps } from "@radix-ui/react-dialog";
 import AuthForm from "~/components/auth/AuthForm";
+import useAuthModal from "store/useAuthModal";
 
-const AuthDialog = ({ open, onOpenChange }: DialogProps) => {
+const AuthModal = () => {
+  const { isOpen, toggleModal } = useAuthModal();
+
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={isOpen} onOpenChange={() => toggleModal(!isOpen)}>
       <DialogContent className="flex flex-col sm:max-w-[26rem]">
         <AuthForm />
       </DialogContent>
@@ -12,4 +14,4 @@ const AuthDialog = ({ open, onOpenChange }: DialogProps) => {
   );
 };
 
-export default AuthDialog;
+export default AuthModal;
