@@ -11,6 +11,8 @@ import { Toaster } from "react-hot-toast";
 import AuthProvider from "~/components/providers/AuthProvider";
 import { TooltipProvider } from "~/components/ui/tooltip";
 
+import "react-loading-skeleton/dist/skeleton.css";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
