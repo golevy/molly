@@ -18,3 +18,5 @@ pnpm dev
 - [shadcn/ui](https://ui.shadcn.com)
 - [lucide](https://lucide.dev)
 - [react-hot-toast](https://react-hot-toast.com)
+- [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton#readme)
+- [data-fns](https://date-fns.org)
