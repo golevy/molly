@@ -13,7 +13,12 @@ const DashboardPage = () => {
     return null;
   }
 
-  return <Dashboard />;
+  return (
+    <>
+      <title>Molly | Dashboard</title>
+      <Dashboard />
+    </>
+  );
 };
 
 export default DashboardPage;
