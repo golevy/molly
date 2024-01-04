@@ -2,14 +2,18 @@
 
 import { useAuth } from "hooks/useAuth";
 import { useSession } from "next-auth/react";
-import React from "react";
+import Dashboard from "~/components/Dashboard";
 
 const DashboardPage = () => {
   useAuth();
 
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
-  return <div className="text-xl">{session?.user.email}</div>;
+  if (status === "loading" || !session) {
+    return null;
+  }
+
+  return <Dashboard />;
 };
 
 export default DashboardPage;

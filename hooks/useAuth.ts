@@ -6,17 +6,21 @@ import useAuthModal from "store/useAuthModal";
 export const useAuth = () => {
   const { data: session, status } = useSession();
   const { isOpen, toggleModal } = useAuthModal();
-
   const router = useRouter();
 
   useEffect(() => {
-    if (status === "loading") {
-      return;
-    }
+    const protectRoutes = async () => {
+      if (status === "loading") return;
 
-    if (!session) {
-      router.push("/");
-      toggleModal(!isOpen);
-    }
-  }, [session, router]);
+      if (!session) {
+        await router.push("/");
+
+        if (!isOpen) {
+          toggleModal(true);
+        }
+      }
+    };
+
+    protectRoutes();
+  }, [session, status, isOpen, router, toggleModal]);
 };
