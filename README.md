@@ -20,3 +20,6 @@ pnpm dev
 - [react-hot-toast](https://react-hot-toast.com)
 - [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton#readme)
 - [data-fns](https://date-fns.org)
+- [react-dropzone](https://react-dropzone.js.org)
+- [React-pdf](https://react-pdf.org)
+- [uploadthing](https://uploadthing.com)
