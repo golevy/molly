@@ -3,7 +3,7 @@
 import { useAuth } from "hooks/useAuth";
 import { useSession } from "next-auth/react";
 import ChatWrapper from "~/components/ChatWrapper";
-import PdfRenderer from "~/components/PdfRenderer";
+import PdfRenderer from "~/components/pdf/PdfRenderer";
 import { api } from "~/trpc/react";
 
 interface PageProps {
@@ -20,12 +20,12 @@ const FilePage = ({ params }: PageProps) => {
 
   const { data: session, status } = useSession();
 
+  // Make database call
+  const { data: file } = api.file.fetchFile.useQuery({ id: fileId });
+
   if (status === "loading" || !session) {
     return null;
   }
-
-  // Make database call
-  const { data: file } = api.file.fetchFile.useQuery({ id: fileId });
 
   return (
     <>
@@ -35,7 +35,7 @@ const FilePage = ({ params }: PageProps) => {
           {/* Left side */}
           <div className="flex-1 xl:flex">
             <div className="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-              <PdfRenderer />
+              {file && <PdfRenderer url={file.url} />}
             </div>
           </div>
 
@@ -44,7 +44,6 @@ const FilePage = ({ params }: PageProps) => {
             <ChatWrapper />
           </div>
         </div>
-        {fileId}
       </div>
     </>
   );
