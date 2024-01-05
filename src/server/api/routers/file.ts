@@ -4,9 +4,6 @@ import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
 
 export const fileRouter = createTRPCRouter({
   fetchAll: protectedProcedure.query(async ({ ctx }) => {
-    // Simulate request delay
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
-
     return await ctx.db.file.findMany({
       where: { userId: ctx.session.user.id },
     });
@@ -47,6 +44,26 @@ export const fileRouter = createTRPCRouter({
           id: input.id,
         },
       });
+
+      return file;
+    }),
+
+  getFile: protectedProcedure
+    .input(z.object({ key: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      const userId = ctx.session.user.id;
+      const { key } = input;
+
+      const file = await ctx.db.file.findFirst({
+        where: {
+          key,
+          userId,
+        },
+      });
+
+      if (!file) {
+        throw new TRPCError({ code: "NOT_FOUND" });
+      }
 
       return file;
     }),

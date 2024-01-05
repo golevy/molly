@@ -1,5 +1,5 @@
 import { cn } from "~/lib/utils";
-import UploadButton from "~/components/UploadButton";
+import UploadFileButton from "~/components/UploadFileButton";
 import { api } from "~/trpc/react";
 import { Ghost, Loader2, MessageSquare, Plus, Trash } from "lucide-react";
 import Skeleton from "react-loading-skeleton";
@@ -37,7 +37,7 @@ const Dashboard = () => {
         )}
       >
         <h1 className="mb-3 text-5xl font-bold text-gray-900">My Files</h1>
-        <UploadButton />
+        <UploadFileButton />
       </div>
 
       {/* Display all user files */}
