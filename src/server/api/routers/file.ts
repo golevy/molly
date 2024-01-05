@@ -12,6 +12,24 @@ export const fileRouter = createTRPCRouter({
     });
   }),
 
+  fetchFile: protectedProcedure
+    .input(z.object({ id: z.string() }))
+    .query(async ({ ctx, input }) => {
+      const { id } = input;
+
+      const file = await ctx.db.file.findFirst({
+        where: {
+          id,
+        },
+      });
+
+      if (!file) {
+        throw new TRPCError({ code: "NOT_FOUND" });
+      }
+
+      return file;
+    }),
+
   deleteFile: protectedProcedure
     .input(z.object({ id: z.string() }))
     .mutation(async ({ ctx, input }) => {
