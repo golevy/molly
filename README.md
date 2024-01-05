@@ -1,4 +1,4 @@
-# Chat PDF
+# Molly
 
 A full stack chat application for Q&A based on PDF content.
 
