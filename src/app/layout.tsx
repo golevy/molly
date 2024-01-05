@@ -6,10 +6,13 @@ import { cookies } from "next/headers";
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 import { TailwindIndicator } from "~/components/TailwindIndicator";
+
 import Navbar from "~/components/Navbar";
-import { Toaster } from "react-hot-toast";
 import AuthProvider from "~/components/providers/AuthProvider";
 import { TooltipProvider } from "~/components/ui/tooltip";
+
+import { Toaster as ReactHotToaster } from "react-hot-toast";
+import { Toaster } from "~/components/ui/toaster";
 
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -39,6 +42,7 @@ export default function RootLayout({
         <TRPCReactProvider cookies={cookies().toString()}>
           <AuthProvider>
             <TooltipProvider>
+              <ReactHotToaster />
               <Toaster />
               <Navbar />
               {children}
