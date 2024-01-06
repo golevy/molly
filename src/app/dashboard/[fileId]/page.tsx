@@ -2,7 +2,7 @@
 
 import { useAuth } from "hooks/useAuth";
 import { useSession } from "next-auth/react";
-import ChatWrapper from "~/components/ChatWrapper";
+import ChatWrapper from "~/components/chat/ChatWrapper";
 import PdfRenderer from "~/components/pdf/PdfRenderer";
 import { api } from "~/trpc/react";
 
@@ -41,7 +41,7 @@ const FilePage = ({ params }: PageProps) => {
 
           {/* Right side */}
           <div className="flex-[0.75] shrink-0 border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
-            <ChatWrapper />
+            {file && <ChatWrapper fileId={file.id} />}
           </div>
         </div>
       </div>
