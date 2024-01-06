@@ -67,4 +67,23 @@ export const fileRouter = createTRPCRouter({
 
       return file;
     }),
+
+  getFileUploadStatus: protectedProcedure
+    .input(z.object({ fileId: z.string() }))
+    .query(async ({ ctx, input }) => {
+      const userId = ctx.session.user.id;
+      const { fileId } = input;
+
+      const file = await ctx.db.file.findFirst({
+        where: {
+          id: fileId,
+          userId: userId,
+        },
+      });
+
+      // Use `as const` ensures that the status property of the returned object is inferred to be exactly the string 'PENDING' and nothing else
+      if (!file) return { status: "PENDING" as const };
+
+      return { status: file.uploadStatus };
+    }),
 });
