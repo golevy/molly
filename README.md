@@ -26,3 +26,4 @@ pnpm dev
 - [react-resize-detector](https://github.com/maslianok/react-resize-detector)
 - [react-hook-form](https://react-hook-form.com)
 - [simplebar-react](https://www.npmjs.com/package/simplebar-react)
+- [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
