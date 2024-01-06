@@ -83,8 +83,8 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
 
   return (
     <div className="flex w-full flex-col items-center rounded-md bg-white shadow">
-      <div className="flex h-14 w-full items-center justify-between border-b border-zinc-200 px-2">
-        <div className="flex items-center gap-1.5">
+      <div className="flex h-14 w-full items-center justify-between border-b border-zinc-200 md:px-2">
+        <div className="flex items-center md:gap-1.5">
           {/* Previous Page */}
           <Button
             disabled={currentPage <= 1}
@@ -134,7 +134,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
         </div>
 
         {/* Toggle Scale */}
-        <div className="space-x-2">
+        <div className="md:space-x-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button className="gap-1.5" aria-label="zoom" variant="ghost">

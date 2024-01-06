@@ -6,7 +6,7 @@ import ChatInput from "~/components/chat/ChatInput";
 import ChatMessages from "~/components/chat/ChatMessages";
 import { cn } from "~/lib/utils";
 import { api } from "~/trpc/react";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "~/components/ui/button";
 
 const REFETCH_UPLOAD_STATUS_INTERVAL = 500;
 
