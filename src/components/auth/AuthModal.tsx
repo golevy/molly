@@ -7,7 +7,7 @@ const AuthModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={() => toggleModal(!isOpen)}>
-      <DialogContent className="flex flex-col sm:max-w-[26rem]">
+      <DialogContent className="flex select-none flex-col sm:max-w-[26rem]">
         <AuthForm />
       </DialogContent>
     </Dialog>
