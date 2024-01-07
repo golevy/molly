@@ -15,6 +15,7 @@ pnpm dev
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 - [Zustand](https://zustand-demo.pmnd.rs/)
+- [Zod](https://zod.dev/)
 - [shadcn/ui](https://ui.shadcn.com)
 - [lucide](https://lucide.dev)
 - [react-hot-toast](https://react-hot-toast.com)
@@ -27,3 +28,5 @@ pnpm dev
 - [react-hook-form](https://react-hook-form.com)
 - [simplebar-react](https://www.npmjs.com/package/simplebar-react)
 - [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
+- [Pinecone](https://sdk.pinecone.io/typescript)
+- [LangChain](https://js.langchain.com/docs/get_started/introduction)
