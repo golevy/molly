@@ -7,6 +7,7 @@ import ChatMessages from "~/components/chat/ChatMessages";
 import { cn } from "~/lib/utils";
 import { api } from "~/trpc/react";
 import { buttonVariants } from "~/components/ui/button";
+import { ChatContextProvider } from "./ChatContext";
 
 const REFETCH_UPLOAD_STATUS_INTERVAL = 500;
 
@@ -91,13 +92,15 @@ const ChatWrapper = ({ fileId }: { fileId: string }) => {
   }
 
   return (
-    <div className="relative flex min-h-full flex-col justify-between gap-2 divide-y divide-zinc-200 bg-zinc-50">
-      <div className="mb-28 flex flex-1 flex-col justify-between">
-        <ChatMessages />
-      </div>
+    <ChatContextProvider fileId={fileId}>
+      <div className="relative flex min-h-full flex-col justify-between gap-2 divide-y divide-zinc-200 bg-zinc-50">
+        <div className="mb-28 flex flex-1 flex-col justify-between">
+          <ChatMessages />
+        </div>
 
-      <ChatInput />
-    </div>
+        <ChatInput />
+      </div>
+    </ChatContextProvider>
   );
 };
 
