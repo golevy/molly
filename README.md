@@ -30,3 +30,4 @@ pnpm dev
 - [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
 - [Pinecone](https://sdk.pinecone.io/typescript)
 - [LangChain](https://js.langchain.com/docs/get_started/introduction)
+- [ai](https://www.npmjs.com/package/ai)
