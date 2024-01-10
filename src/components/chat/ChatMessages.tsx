@@ -25,7 +25,7 @@ const ChatMessages = ({ fileId }: { fileId: string }) => {
 
   // Defining a loading message
   const loadingMessage = {
-    createdAt: new Date().toISOString(),
+    createdAt: new Date(),
     id: "loading-message",
     isUserMessage: false,
     text: (
@@ -56,9 +56,21 @@ const ChatMessages = ({ fileId }: { fileId: string }) => {
             combinedMessages[i]?.isUserMessage;
 
           if (i === combinedMessages.length - 1) {
-            return <Message key={message.id} />;
+            return (
+              <Message
+                key={message.id}
+                message={message}
+                isNextMessageSamePerson={isNextMessageSamePerson}
+              />
+            );
           } else {
-            return <Message key={message.id} />;
+            return (
+              <Message
+                key={message.id}
+                message={message}
+                isNextMessageSamePerson={isNextMessageSamePerson}
+              />
+            );
           }
         })
       ) : isLoading ? (

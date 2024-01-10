@@ -32,3 +32,4 @@ pnpm dev
 - [LangChain](https://js.langchain.com/docs/get_started/introduction)
 - [ai](https://www.npmjs.com/package/ai)
 - [tailwind-scrollbar](https://adoxography.github.io/tailwind-scrollbar/examples)
+- [react-markdown](https://github.com/remarkjs/react-markdown)
