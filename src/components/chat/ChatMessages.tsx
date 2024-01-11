@@ -4,8 +4,12 @@ import { cn } from "~/lib/utils";
 import { api } from "~/trpc/react";
 import Message from "~/components/chat/Message";
 import Skeleton from "react-loading-skeleton";
+import { useContext } from "react";
+import { ChatContext } from "~/components/chat/ChatContext";
 
 const ChatMessages = ({ fileId }: { fileId: string }) => {
+  const { isLoading: isAiThinking } = useContext(ChatContext);
+
   // Using the TRPC infinite query hook to fetch messages for the file
   const { data, isLoading, fetchNextPage } =
     api.file.getFileMessages.useInfiniteQuery(
@@ -37,7 +41,7 @@ const ChatMessages = ({ fileId }: { fileId: string }) => {
 
   // Combining the loading message with actual messages
   const combinedMessages = [
-    ...(true ? [loadingMessage] : []), // Always display the loading message
+    ...(isAiThinking ? [loadingMessage] : []), // Always display the loading message
     ...(messages ?? []), // Display messages if available
   ];
 
