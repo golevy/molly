@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.0.16
     version: 0.0.16(@pinecone-database/pinecone@1.1.2)
   '@langchain/openai':
-    specifier: ^0.0.10
-    version: 0.0.10
+    specifier: ^0.0.11
+    version: 0.0.11
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@5.8.0)(next-auth@4.24.5)
@@ -712,7 +712,20 @@ packages:
     resolution: {integrity: sha512-74BBDsuLHT+jNlDviHPUemqiG2nm1AF8i9ta0zfkwjE9JtNITL5ZVhoCSczklipx5LzO+6etVuhjdhXcwNOfBA==}
     engines: {node: '>=18'}
     dependencies:
-      '@langchain/core': 0.1.10
+      '@langchain/core': 0.1.12
+      js-tiktoken: 1.0.8
+      openai: 4.24.3
+      zod: 3.22.4
+      zod-to-json-schema: 3.20.3(zod@3.22.4)
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@langchain/openai@0.0.11:
+    resolution: {integrity: sha512-km0N+b1bcbtHVDmTEGs7LJFsCrjAcOMnkYlBQrhuIcyhJ052iF4zPpfptScQcZ25dW1yJJI8DS6dVVeM76l52w==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@langchain/core': 0.1.12
       js-tiktoken: 1.0.8
       openai: 4.24.3
       zod: 3.22.4
