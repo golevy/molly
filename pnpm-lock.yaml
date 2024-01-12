@@ -14,6 +14,9 @@ dependencies:
   '@langchain/openai':
     specifier: ^0.0.11
     version: 0.0.11
+  '@mantine/hooks':
+    specifier: ^7.4.1
+    version: 7.4.1(react@18.2.0)
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@5.8.0)(next-auth@4.24.5)
@@ -173,8 +176,8 @@ devDependencies:
     specifier: ^8.56.1
     version: 8.56.1
   '@types/node':
-    specifier: ^20.10.8
-    version: 20.10.8
+    specifier: ^20.11.0
+    version: 20.11.0
   '@types/react':
     specifier: ^18.2.37
     version: 18.2.47
@@ -732,6 +735,14 @@ packages:
       zod-to-json-schema: 3.20.3(zod@3.22.4)
     transitivePeerDependencies:
       - encoding
+    dev: false
+
+  /@mantine/hooks@7.4.1(react@18.2.0):
+    resolution: {integrity: sha512-7gV9YR+xZ1L69MGVaSNwV0gaxIz4bCZuGxXTtnuaamDcO/4YiNDtmvdD7/jC/RTa1iJMnZ6YiYrcPXLOn+8saQ==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@mapbox/node-pre-gyp@1.0.11:
@@ -1685,7 +1696,7 @@ packages:
   /@types/bcrypt@5.0.2:
     resolution: {integrity: sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==}
     dependencies:
-      '@types/node': 20.10.8
+      '@types/node': 20.11.0
     dev: true
 
   /@types/debug@4.1.12:
@@ -1743,7 +1754,7 @@ packages:
   /@types/node-fetch@2.6.10:
     resolution: {integrity: sha512-PPpPK6F9ALFTn59Ka3BaL+qGuipRfxNE8qVgkp0bVixeiR2c2/L+IVOiBdu9JhhT22sWnQEp6YyHGI2b2+CMcA==}
     dependencies:
-      '@types/node': 20.10.8
+      '@types/node': 20.11.0
       form-data: 4.0.0
     dev: false
 
@@ -1753,8 +1764,8 @@ packages:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.10.8:
-    resolution: {integrity: sha512-f8nQs3cLxbAFc00vEU59yf9UyGUftkPaLGfvbVOIDdx2i1b8epBqj2aNGyP19fiyXWvlmZ7qC1XLjAzw/OKIeA==}
+  /@types/node@20.11.0:
+    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
     dependencies:
       undici-types: 5.26.5
 
