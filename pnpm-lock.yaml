@@ -173,8 +173,8 @@ devDependencies:
     specifier: ^5.0.2
     version: 5.0.2
   '@types/eslint':
-    specifier: ^8.56.1
-    version: 8.56.1
+    specifier: ^8.56.2
+    version: 8.56.2
   '@types/node':
     specifier: ^20.11.0
     version: 20.11.0
@@ -1705,8 +1705,8 @@ packages:
       '@types/ms': 0.7.34
     dev: false
 
-  /@types/eslint@8.56.1:
-    resolution: {integrity: sha512-18PLWRzhy9glDQp3+wOgfLYRWlhgX0azxgJ63rdpoUHyrC9z0f5CkFburjQx4uD7ZCruw85ZtMt6K+L+R8fLJQ==}
+  /@types/eslint@8.56.2:
+    resolution: {integrity: sha512-uQDwm1wFHmbBbCZCqAlq6Do9LYwByNZHWzXppSnay9SuwJ+VRbjkbLABer54kcPnMSlG6Fdiy2yaFXm/z9Z5gw==}
     dependencies:
       '@types/estree': 1.0.5
       '@types/json-schema': 7.0.15
