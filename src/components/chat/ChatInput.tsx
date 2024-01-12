@@ -11,6 +11,18 @@ const ChatInput = ({ isDisabled }: { isDisabled?: boolean }) => {
   // useRef hook to get direct access to the textarea DOM element.
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
+  // useState hook to prevent double submission
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const sendMessage = () => {
+    if (message.trim() === "" || isSubmitting || isLoading) return;
+
+    setIsSubmitting(true); // Disable button to prevent double submission
+    addMessage();
+    setIsSubmitting(false); // Re-enable the button after sending the message
+    textareaRef.current?.focus(); // Refocus on the textarea
+  };
+
   return (
     <div className="absolute bottom-0 left-0 w-full">
       <div className="mx-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
@@ -28,8 +40,7 @@ const ChatInput = ({ isDisabled }: { isDisabled?: boolean }) => {
                   // Handling the Enter key press event.
                   if (e.key === "Enter" && !e.shiftKey) {
                     e.preventDefault(); // Prevent the default action of the Enter key in a textarea(insert a new line).
-                    addMessage();
-                    textareaRef.current?.focus(); // Refocus on the textarea after sending the message.
+                    sendMessage();
                   }
                 }}
                 placeholder="Enter your question..."
@@ -39,10 +50,7 @@ const ChatInput = ({ isDisabled }: { isDisabled?: boolean }) => {
               <Button
                 disabled={isDisabled || isLoading}
                 aria-label="send message"
-                onClick={() => {
-                  addMessage();
-                  textareaRef.current?.focus(); // Refocus on the textarea after sending the message.
-                }}
+                onClick={sendMessage}
                 className="absolute bottom-1.5 right-[0.5rem]"
               >
                 <Send className="h-4 w-4" />
