@@ -14,6 +14,9 @@ dependencies:
   '@langchain/openai':
     specifier: ^0.0.10
     version: 0.0.10
+  '@mantine/hooks':
+    specifier: ^7.4.1
+    version: 7.4.1(react@18.2.0)
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@5.8.0)(next-auth@4.24.5)
@@ -719,6 +722,14 @@ packages:
       zod-to-json-schema: 3.20.3(zod@3.22.4)
     transitivePeerDependencies:
       - encoding
+    dev: false
+
+  /@mantine/hooks@7.4.1(react@18.2.0):
+    resolution: {integrity: sha512-7gV9YR+xZ1L69MGVaSNwV0gaxIz4bCZuGxXTtnuaamDcO/4YiNDtmvdD7/jC/RTa1iJMnZ6YiYrcPXLOn+8saQ==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@mapbox/node-pre-gyp@1.0.11:

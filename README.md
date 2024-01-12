@@ -33,3 +33,4 @@ pnpm dev
 - [ai](https://www.npmjs.com/package/ai)
 - [tailwind-scrollbar](https://adoxography.github.io/tailwind-scrollbar/examples)
 - [react-markdown](https://github.com/remarkjs/react-markdown)
+- [@mantine/hooks](https://mantine.dev)

@@ -1,11 +1,14 @@
+import { useContext, useEffect, useRef } from "react";
 import { Loader2, MessageSquare } from "lucide-react";
-import { INFINITE_QUERY_LIMIT } from "~/config/infinite-query";
-import { cn } from "~/lib/utils";
-import { api } from "~/trpc/react";
-import Message from "~/components/chat/Message";
 import Skeleton from "react-loading-skeleton";
-import { useContext } from "react";
+import { useIntersection } from "@mantine/hooks";
+
+import { api } from "~/trpc/react";
+import { cn } from "~/lib/utils";
+import { INFINITE_QUERY_LIMIT } from "~/config/infinite-query";
+
 import { ChatContext } from "~/components/chat/ChatContext";
+import Message from "~/components/chat/Message";
 
 const ChatMessages = ({ fileId }: { fileId: string }) => {
   const { isLoading: isAiThinking } = useContext(ChatContext);
@@ -45,6 +48,24 @@ const ChatMessages = ({ fileId }: { fileId: string }) => {
     ...(messages ?? []), // Display messages if available
   ];
 
+  // Using useRef to create a reference pointing to the last message element in the message list
+  const lastMessageRef = useRef<HTMLDivElement>(null);
+
+  //* useIntersection()
+  // Using the useIntersection hook to monitor when the last message element appears in the viewport
+  const { ref, entry } = useIntersection({
+    root: lastMessageRef.current, // The root element being monitored
+    threshold: 1, // Trigger when the element is fully visible
+  });
+
+  // Using the useEffect hook to implement infinite scroll loading
+  useEffect(() => {
+    // Load the next page of messages when the last message element is fully visible in the viewport
+    if (entry?.isIntersecting) {
+      fetchNextPage();
+    }
+  }, [entry, fetchNextPage]);
+
   return (
     <div
       className={cn(
@@ -62,6 +83,7 @@ const ChatMessages = ({ fileId }: { fileId: string }) => {
           if (i === combinedMessages.length - 1) {
             return (
               <Message
+                ref={ref}
                 key={message.id}
                 message={message}
                 isNextMessageSamePerson={isNextMessageSamePerson}
