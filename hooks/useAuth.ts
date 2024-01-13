@@ -9,11 +9,11 @@ export const useAuth = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const protectRoutes = async () => {
+    const protectRoutes = () => {
       if (status === "loading") return;
 
       if (!session) {
-        await router.push("/");
+        router.push("/");
 
         if (!isOpen) {
           toggleModal(true);
