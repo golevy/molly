@@ -6,9 +6,13 @@ import Link from "next/link";
 import { Button, buttonVariants } from "~/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import useAuthModal from "store/useAuthModal";
+import { useSession } from "next-auth/react";
+import UserAccountNav from "~/components/UserAccountNav";
 
 const Navbar = () => {
   const { isOpen, toggleModal } = useAuthModal();
+  const { data: session } = useSession();
+  const user = session?.user;
 
   return (
     <nav
@@ -32,36 +36,51 @@ const Navbar = () => {
           {/* TODO: Mobile menu */}
 
           <div className="hidden items-center space-x-4 sm:flex">
-            <>
-              <Link
-                href="/pricing"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "sm",
-                })}
-              >
-                Pricing
-              </Link>
-              <button
-                onClick={() => {
-                  toggleModal(!isOpen);
-                }}
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "sm",
-                })}
-              >
-                Sign in
-              </button>
-              <Button
-                className={buttonVariants({
-                  size: "sm",
-                })}
-              >
-                Get started
-                <ArrowRight className="ml-1.5 h-5 w-5" />
-              </Button>
-            </>
+            {!user ? (
+              <>
+                <Link
+                  href="/pricing"
+                  className={buttonVariants({
+                    variant: "ghost",
+                    size: "sm",
+                  })}
+                >
+                  Pricing
+                </Link>
+                <button
+                  onClick={() => {
+                    toggleModal(!isOpen);
+                  }}
+                  className={buttonVariants({
+                    variant: "ghost",
+                    size: "sm",
+                  })}
+                >
+                  Sign in
+                </button>
+                <Button
+                  className={buttonVariants({
+                    size: "sm",
+                  })}
+                >
+                  Get started
+                  <ArrowRight className="ml-1.5 h-5 w-5" />
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/dashboard"
+                  className={buttonVariants({
+                    variant: "ghost",
+                    size: "sm",
+                  })}
+                >
+                  Dashboard
+                </Link>
+                <UserAccountNav />
+              </>
+            )}
           </div>
         </div>
       </MaxWidthWrapper>
