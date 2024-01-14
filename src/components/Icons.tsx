@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cn } from "~/lib/utils";
-import { LucideProps, User } from "lucide-react";
+import { type LucideProps, User } from "lucide-react";
 
 export const GithubIcon = ({ className, ...rest }: { className: string }) => (
   <svg

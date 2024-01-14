@@ -1,5 +1,5 @@
-import { AppRouter } from "~/server/api/root";
-import { inferRouterOutputs } from "@trpc/server";
+import type { AppRouter } from "~/server/api/root";
+import type { inferRouterOutputs } from "@trpc/server";
 
 // Infer the RouterOutput type from the AppRouter.
 // This type represents the output types of all the procedures in the AppRouter.

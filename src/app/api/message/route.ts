@@ -1,6 +1,6 @@
 import { PineconeStore } from "@langchain/community/vectorstores/pinecone";
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 import { openai } from "~/lib/openai";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 import { getPineconeClient } from "~/lib/pinecone";
