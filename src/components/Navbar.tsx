@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react";
 import useAuthModal from "store/useAuthModal";
 import { useSession } from "next-auth/react";
 import UserAccountNav from "~/components/UserAccountNav";
+import MobileNav from "~/components/MobileNav";
 
 const Navbar = () => {
   const { isOpen, toggleModal } = useAuthModal();
@@ -33,7 +34,8 @@ const Navbar = () => {
             <span>Molly</span>
           </Link>
 
-          {/* TODO: Mobile menu */}
+          {/* Mobile menu */}
+          <MobileNav />
 
           <div className="hidden items-center space-x-4 sm:flex">
             {!user ? (
