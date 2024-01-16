@@ -135,8 +135,8 @@ dependencies:
     specifier: ^7.7.0
     version: 7.7.0(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
   react-resize-detector:
-    specifier: ^9.1.1
-    version: 9.1.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^10.0.1
+    version: 10.0.1(react-dom@18.2.0)(react@18.2.0)
   react-textarea-autosize:
     specifier: ^8.5.3
     version: 8.5.3(@types/react@18.2.48)(react@18.2.0)
@@ -4495,11 +4495,11 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.2.48)(react@18.2.0)
     dev: false
 
-  /react-resize-detector@9.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-siLzop7i4xIvZIACE/PHTvRegA8QRCEt0TfmvJ/qCIFQJ4U+3NuYcF8tNDmDWxfIn+X1eNCyY2rauH4KRxge8w==}
+  /react-resize-detector@10.0.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CR2EdP83ycGlWkhhrd6+hhZVhPJO4xnzClFCTBXlODVTHOgiDJQu77sBt67J7P3gfU4ec/kOuf2c5EcyTUNLXQ==}
     peerDependencies:
-      react: ^16.0.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
       lodash: 4.17.21
       react: 18.2.0
