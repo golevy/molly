@@ -58,7 +58,6 @@ const MobileNav = () => {
         onClick={toggleOpen}
         className="relative z-50 h-5 w-5 text-zinc-700"
       />
-
       {isOpen ? (
         <div
           className={cn(
