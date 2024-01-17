@@ -1,6 +1,10 @@
 # Molly
 
 A full stack chat application for Q&A based on PDF content.
+![image](https://github.com/golevy/molly/assets/152772761/02f1d665-4870-4095-abe0-a248f6014b28)
+![image](https://github.com/golevy/molly/assets/152772761/fb13c3e2-bbcb-480b-853b-9e6367486c0e)
+![image](https://github.com/golevy/molly/assets/152772761/e966eeb8-b3b9-44d9-84ed-ab42d3b014a4)
+![image](https://github.com/golevy/molly/assets/152772761/f88c6d96-51c2-4443-a845-7b834216b22f)
 
 ## Getting Started
 ```
