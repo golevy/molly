@@ -72,8 +72,8 @@ dependencies:
     specifier: ^10.43.6
     version: 10.45.0
   '@uploadthing/react':
-    specifier: ^6.1.0
-    version: 6.1.0(next@14.0.4)(react@18.2.0)(uploadthing@6.1.1)
+    specifier: ^6.2.0
+    version: 6.2.0(next@14.0.4)(react@18.2.0)(uploadthing@6.1.1)
   ai:
     specifier: ^2.2.31
     version: 2.2.31(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
@@ -1720,12 +1720,19 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
+  /@uploadthing/dropzone@0.1.1:
+    resolution: {integrity: sha512-ohlnFQfNr/UmImfipVo4uiBj1HQL7dp/sWBD96iAajc6RaQuYnHATGaSaISpCjZTeoLkksuu4/LR8vU9nSzpvQ==}
+    dependencies:
+      attr-accept: 2.2.2
+      file-selector: 0.6.0
+    dev: false
+
   /@uploadthing/mime-types@0.2.2:
     resolution: {integrity: sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==}
     dev: false
 
-  /@uploadthing/react@6.1.0(next@14.0.4)(react@18.2.0)(uploadthing@6.1.1):
-    resolution: {integrity: sha512-UCck0Jd6wJvvmVMMjlOzgGQghEvWv8Pw+IWxsWMvrD/UHiZX7cWc7TgVy88tiAdtuvgatCLfoOsemBMAIhTFdw==}
+  /@uploadthing/react@6.2.0(next@14.0.4)(react@18.2.0)(uploadthing@6.1.1):
+    resolution: {integrity: sha512-DTD4R9OaVH/UDbs+J/s2UFMjNVQfHA+FCjAUEoa1JgTXQUfP8HvpOl8pCMcLqWx555e98bZrSgw50LjsOWGS0A==}
     peerDependencies:
       next: '*'
       react: ^17.0.2 || ^18.0.0
@@ -1734,7 +1741,8 @@ packages:
       next:
         optional: true
     dependencies:
-      '@uploadthing/shared': 6.0.3(@uploadthing/mime-types@0.2.2)
+      '@uploadthing/dropzone': 0.1.1
+      '@uploadthing/shared': 6.1.0
       attr-accept: 2.2.2
       file-selector: 0.6.0
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -1754,6 +1762,15 @@ packages:
         optional: true
     dependencies:
       '@uploadthing/mime-types': 0.2.2
+    dev: false
+
+  /@uploadthing/shared@6.1.0:
+    resolution: {integrity: sha512-pZNTqq/3QbAnLF6wRKAa9lM7MxdP057z3W3E6vZiHnhmwmdMllJpaVs3TWqe0wbSy6jcDDRLhDCuU/Vvr2KsZw==}
+    peerDependencies:
+      '@uploadthing/mime-types': ^0.2.2
+    peerDependenciesMeta:
+      '@uploadthing/mime-types':
+        optional: true
     dev: false
 
   /@vue/compiler-core@3.4.14:
