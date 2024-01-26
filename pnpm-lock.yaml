@@ -72,8 +72,8 @@ dependencies:
     specifier: ^10.43.6
     version: 10.45.0
   '@uploadthing/react':
-    specifier: ^6.2.1
-    version: 6.2.1(next@14.0.4)(react@18.2.0)(uploadthing@6.3.1)
+    specifier: ^6.2.2
+    version: 6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.1)
   ai:
     specifier: ^2.2.31
     version: 2.2.31(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
@@ -1751,8 +1751,8 @@ packages:
     resolution: {integrity: sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==}
     dev: false
 
-  /@uploadthing/react@6.2.1(next@14.0.4)(react@18.2.0)(uploadthing@6.3.1):
-    resolution: {integrity: sha512-EPyOtxEyD/alcp5DSHjI1GkcAVRgI8EonUYn1xVSCQCJLXv0CctuPpKJhpVD5UuZwcBW9qBY37NwTK3Ac67fRg==}
+  /@uploadthing/react@6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.1):
+    resolution: {integrity: sha512-fDfVooLTbC5/FM1o/chPDf5i8DRxCOeRSuRl0R6yh/jIHTdDO2kwXeM5DTaBazJmaEabh5GB+I9Rwg8nU0QdVA==}
     peerDependencies:
       next: '*'
       react: ^17.0.2 || ^18.0.0

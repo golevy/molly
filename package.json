@@ -35,7 +35,7 @@
     "@trpc/next": "^10.43.6",
     "@trpc/react-query": "^10.43.6",
     "@trpc/server": "^10.43.6",
-    "@uploadthing/react": "^6.2.1",
+    "@uploadthing/react": "^6.2.2",
     "ai": "^2.2.31",
     "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.0",
