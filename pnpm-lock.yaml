@@ -75,8 +75,8 @@ dependencies:
     specifier: ^6.2.2
     version: 6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.1)
   ai:
-    specifier: ^2.2.31
-    version: 2.2.31(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
+    specifier: ^2.2.32
+    version: 2.2.32(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
   bcrypt:
     specifier: ^5.1.1
     version: 5.1.1
@@ -2147,8 +2147,8 @@ packages:
       humanize-ms: 1.2.1
     dev: false
 
-  /ai@2.2.31(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14):
-    resolution: {integrity: sha512-WQH13RxP+RYo9IE/FX8foNQh9gcKO/dhl9OGy5JL2bHJVBlnugPmH2CYJWaRt+mvjXHaU8txB+jzGo/fbtH2HA==}
+  /ai@2.2.32(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14):
+    resolution: {integrity: sha512-bMQLulRiG5AkivgbToIZ63KDGlx0+Yhd2HxjiQjHceaNglk4gdTZ/oOmZwW2gW7Q3rFQWQAwPAlmx6ZLUInphw==}
     engines: {node: '>=14.6'}
     peerDependencies:
       react: ^18.2.0
