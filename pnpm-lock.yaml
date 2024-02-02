@@ -9,8 +9,8 @@ dependencies:
     specifier: ^3.3.4
     version: 3.3.4(react-hook-form@7.50.0)
   '@langchain/community':
-    specifier: ^0.0.24
-    version: 0.0.24(@pinecone-database/pinecone@1.1.3)
+    specifier: ^0.0.26
+    version: 0.0.26(@pinecone-database/pinecone@1.1.3)
   '@langchain/openai':
     specifier: ^0.0.13
     version: 0.0.13
@@ -345,8 +345,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@langchain/community@0.0.22(@pinecone-database/pinecone@1.1.3):
-    resolution: {integrity: sha512-IycIl32raRqMFTe/0mtzGfqw/XsmjEaUEffgWVfs+n2yJEBDuEnLDbudAmhATcHq/S5XxGk2lPJRvbXCCgvjQQ==}
+  /@langchain/community@0.0.24(@pinecone-database/pinecone@1.1.3):
+    resolution: {integrity: sha512-kYzQoPxNQcvp6sycgoVKjpykFEbxLSHwXKFwZDjOuQwwdpQeVw1Np22PCwkg+I0/J8pAVrZf09Hkmcn6CfvxGg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@aws-crypto/sha256-js': ^5.0.0
@@ -360,7 +360,7 @@ packages:
       '@aws-sdk/credential-provider-node': ^3.388.0
       '@azure/search-documents': ^12.0.0
       '@clickhouse/client': ^0.2.5
-      '@cloudflare/ai': ^1.0.12
+      '@cloudflare/ai': '*'
       '@datastax/astra-db-ts': ^0.1.4
       '@elastic/elasticsearch': ^8.4.0
       '@getmetal/metal-sdk': '*'
@@ -372,7 +372,7 @@ packages:
       '@huggingface/inference': ^2.6.4
       '@mozilla/readability': '*'
       '@opensearch-project/opensearch': '*'
-      '@pinecone-database/pinecone': ^1.1.0
+      '@pinecone-database/pinecone': '*'
       '@planetscale/database': ^1.8.0
       '@qdrant/js-client-rest': ^1.2.0
       '@raycast/api': ^1.55.2
@@ -398,7 +398,7 @@ packages:
       closevector-common: 0.1.0-alpha.1
       closevector-node: 0.1.0-alpha.10
       closevector-web: 0.1.0-alpha.16
-      cohere-ai: '>=6.0.0'
+      cohere-ai: '*'
       convex: ^1.3.1
       discord.js: ^14.14.1
       faiss-node: ^0.5.1
@@ -605,8 +605,8 @@ packages:
       - encoding
     dev: false
 
-  /@langchain/community@0.0.24(@pinecone-database/pinecone@1.1.3):
-    resolution: {integrity: sha512-kYzQoPxNQcvp6sycgoVKjpykFEbxLSHwXKFwZDjOuQwwdpQeVw1Np22PCwkg+I0/J8pAVrZf09Hkmcn6CfvxGg==}
+  /@langchain/community@0.0.26(@pinecone-database/pinecone@1.1.3):
+    resolution: {integrity: sha512-E5/lltEkkRCxA9WQ/IpdTWUBj5gaCOYuf6r2MX4ZNTR5gfaZkHdLQWF1rew6uG3Z7XjRMMtIxxT9jS7me6sRRA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@aws-crypto/sha256-js': ^5.0.0
@@ -3238,7 +3238,7 @@ packages:
         optional: true
     dependencies:
       '@anthropic-ai/sdk': 0.9.1
-      '@langchain/community': 0.0.22(@pinecone-database/pinecone@1.1.3)
+      '@langchain/community': 0.0.24(@pinecone-database/pinecone@1.1.3)
       '@langchain/core': 0.1.17
       '@langchain/openai': 0.0.13
       '@pinecone-database/pinecone': 1.1.3
