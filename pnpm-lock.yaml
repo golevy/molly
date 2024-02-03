@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.0.26
     version: 0.0.26(@pinecone-database/pinecone@2.0.1)
   '@langchain/openai':
-    specifier: ^0.0.13
-    version: 0.0.13
+    specifier: ^0.0.14
+    version: 0.0.14
   '@mantine/hooks':
     specifier: ^7.5.1
     version: 7.5.1(react@18.2.0)
@@ -884,6 +884,19 @@ packages:
 
   /@langchain/openai@0.0.13:
     resolution: {integrity: sha512-kgPwFiUA5Abmt8Q/cDhC4o1o5QAYuq962CqneVieMIgTUOJhYqB8Na4/7JI0EIfEZuUP2uuTrtqsulbLpGNQ8w==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@langchain/core': 0.1.17
+      js-tiktoken: 1.0.8
+      openai: 4.26.0
+      zod: 3.22.4
+      zod-to-json-schema: 3.22.3(zod@3.22.4)
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@langchain/openai@0.0.14:
+    resolution: {integrity: sha512-co6nRylPrLGY/C3JYxhHt6cxLq07P086O7K3QaZH7SFFErIN9wSzJonpvhZR07DEUq6eK6wKgh2ORxA/NcjSRQ==}
     engines: {node: '>=18'}
     dependencies:
       '@langchain/core': 0.1.17
