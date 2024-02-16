@@ -73,7 +73,7 @@ dependencies:
     version: 10.45.0
   '@uploadthing/react':
     specifier: ^6.2.3
-    version: 6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.3.3)
+    version: 6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.4.0)
   ai:
     specifier: ^2.2.35
     version: 2.2.35(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
@@ -90,8 +90,8 @@ dependencies:
     specifier: ^3.3.1
     version: 3.3.1
   langchain:
-    specifier: ^0.1.19
-    version: 0.1.19(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1)
+    specifier: ^0.1.20
+    version: 0.1.20(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1)
   lucide-react:
     specifier: ^0.331.0
     version: 0.331.0(react@18.2.0)
@@ -2059,7 +2059,7 @@ packages:
     resolution: {integrity: sha512-K2KVt90PdEZqGQ74tUXMCOFCUPzk5UUItCHHBd6+bC3QC8b/D9glORqVl6VI4a/EbnU9rHVJuXGHWsvoyM44sg==}
     dev: false
 
-  /@uploadthing/react@6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.3.3):
+  /@uploadthing/react@6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.4.0):
     resolution: {integrity: sha512-hUnPDHQBPykcAisHqIhGaOi7BU9tjE6EP4hyXnaeVsUeWGh8VTED5+ofYiulelCwBYv+/8mDOJ9nj5WU0v6FIg==}
     peerDependencies:
       next: '*'
@@ -2070,7 +2070,7 @@ packages:
         optional: true
     dependencies:
       '@uploadthing/dropzone': 0.1.2(react@18.2.0)(solid-js@1.8.11)
-      '@uploadthing/shared': 6.3.0
+      '@uploadthing/shared': 6.3.0(@uploadthing/mime-types@0.2.3)
       attr-accept: 2.2.2
       file-selector: 0.6.0
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -2082,19 +2082,7 @@ packages:
       - solid-js
     dev: false
 
-  /@uploadthing/shared@6.2.1(@uploadthing/mime-types@0.2.2):
-    resolution: {integrity: sha512-g/BHzRDuz7f97lEO4VR6PPIQ61YDp9sZWbohI1qi/Nts+bL6it1PyBKyQXIf9glhtfGoFO9Izb1jayO7wmxJkw==}
-    peerDependencies:
-      '@uploadthing/mime-types': ^0.2.2
-    peerDependenciesMeta:
-      '@uploadthing/mime-types':
-        optional: true
-    dependencies:
-      '@uploadthing/mime-types': 0.2.2
-      std-env: 3.7.0
-    dev: false
-
-  /@uploadthing/shared@6.3.0:
+  /@uploadthing/shared@6.3.0(@uploadthing/mime-types@0.2.3):
     resolution: {integrity: sha512-IXh/Y8v3JUEPb+n9e92X37hZywqjDJsOq8rrfKhZRmB6bMJNJncHz3X4fqofexDB96dmB8KwizdRYTQAxZvYQg==}
     peerDependencies:
       '@uploadthing/mime-types': ^0.2.2
@@ -2102,6 +2090,7 @@ packages:
       '@uploadthing/mime-types':
         optional: true
     dependencies:
+      '@uploadthing/mime-types': 0.2.3
       std-env: 3.7.0
     dev: false
 
@@ -3138,8 +3127,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /langchain@0.1.19(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1):
-    resolution: {integrity: sha512-LYriiBsbdQmVdfREBUga4jSy5/OKGMSxadzW74q7qzQsWOgNFymfHbyb4cmRpwtJmz+WR2TPGLHdPLeIxuJ3eg==}
+  /langchain@0.1.20(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1):
+    resolution: {integrity: sha512-NaO4Ovbwb0EHqyo83Wg7TKQE7tV1WGvnGdncpMiazBL9Qgv+vYpDpOV66C64M2C/4fYrNJV/BKDljjFhSE8PSw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@aws-sdk/client-s3': ^3.310.0
@@ -3151,7 +3140,7 @@ packages:
       '@gomomento/sdk-core': ^1.51.1
       '@gomomento/sdk-web': ^1.51.1
       '@google-ai/generativelanguage': ^0.2.1
-      '@google-cloud/storage': ^6.10.1
+      '@google-cloud/storage': ^6.10.1 || ^7.7.0
       '@notionhq/client': ^2.2.10
       '@pinecone-database/pinecone': '*'
       '@supabase/supabase-js': ^2.10.0
