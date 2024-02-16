@@ -73,7 +73,7 @@ dependencies:
     version: 10.45.0
   '@uploadthing/react':
     specifier: ^6.2.2
-    version: 6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.3)
+    version: 6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.4.0)
   ai:
     specifier: ^2.2.35
     version: 2.2.35(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
@@ -93,8 +93,8 @@ dependencies:
     specifier: ^0.1.19
     version: 0.1.19(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1)
   lucide-react:
-    specifier: ^0.323.0
-    version: 0.323.0(react@18.2.0)
+    specifier: ^0.331.0
+    version: 0.331.0(react@18.2.0)
   next:
     specifier: ^14.0.3
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -159,8 +159,8 @@ dependencies:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.1)
   uploadthing:
-    specifier: ^6.3.3
-    version: 6.3.3
+    specifier: ^6.4.0
+    version: 6.4.0(next@14.0.4)(tailwindcss@3.4.1)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -179,8 +179,8 @@ devDependencies:
     specifier: ^8.56.2
     version: 8.56.2
   '@types/node':
-    specifier: ^20.11.17
-    version: 20.11.17
+    specifier: ^20.11.19
+    version: 20.11.19
   '@types/react':
     specifier: ^18.2.55
     version: 18.2.55
@@ -1927,7 +1927,7 @@ packages:
   /@types/bcrypt@5.0.2:
     resolution: {integrity: sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==}
     dependencies:
-      '@types/node': 20.11.17
+      '@types/node': 20.11.19
     dev: true
 
   /@types/debug@4.1.12:
@@ -1985,7 +1985,7 @@ packages:
   /@types/node-fetch@2.6.10:
     resolution: {integrity: sha512-PPpPK6F9ALFTn59Ka3BaL+qGuipRfxNE8qVgkp0bVixeiR2c2/L+IVOiBdu9JhhT22sWnQEp6YyHGI2b2+CMcA==}
     dependencies:
-      '@types/node': 20.11.17
+      '@types/node': 20.11.19
       form-data: 4.0.0
     dev: false
 
@@ -1995,8 +1995,8 @@ packages:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.11.17:
-    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
+  /@types/node@20.11.19:
+    resolution: {integrity: sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==}
     dependencies:
       undici-types: 5.26.5
 
@@ -2045,11 +2045,11 @@ packages:
       file-selector: 0.6.0
     dev: false
 
-  /@uploadthing/mime-types@0.2.2:
-    resolution: {integrity: sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==}
+  /@uploadthing/mime-types@0.2.3:
+    resolution: {integrity: sha512-K2KVt90PdEZqGQ74tUXMCOFCUPzk5UUItCHHBd6+bC3QC8b/D9glORqVl6VI4a/EbnU9rHVJuXGHWsvoyM44sg==}
     dev: false
 
-  /@uploadthing/react@6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.3):
+  /@uploadthing/react@6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.4.0):
     resolution: {integrity: sha512-fDfVooLTbC5/FM1o/chPDf5i8DRxCOeRSuRl0R6yh/jIHTdDO2kwXeM5DTaBazJmaEabh5GB+I9Rwg8nU0QdVA==}
     peerDependencies:
       next: '*'
@@ -2066,7 +2066,7 @@ packages:
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       tailwind-merge: 1.14.0
-      uploadthing: 6.3.3
+      uploadthing: 6.4.0(next@14.0.4)(tailwindcss@3.4.1)
     transitivePeerDependencies:
       - '@uploadthing/mime-types'
     dev: false
@@ -2082,15 +2082,15 @@ packages:
       std-env: 3.7.0
     dev: false
 
-  /@uploadthing/shared@6.2.1(@uploadthing/mime-types@0.2.2):
-    resolution: {integrity: sha512-g/BHzRDuz7f97lEO4VR6PPIQ61YDp9sZWbohI1qi/Nts+bL6it1PyBKyQXIf9glhtfGoFO9Izb1jayO7wmxJkw==}
+  /@uploadthing/shared@6.3.0(@uploadthing/mime-types@0.2.3):
+    resolution: {integrity: sha512-IXh/Y8v3JUEPb+n9e92X37hZywqjDJsOq8rrfKhZRmB6bMJNJncHz3X4fqofexDB96dmB8KwizdRYTQAxZvYQg==}
     peerDependencies:
       '@uploadthing/mime-types': ^0.2.2
     peerDependenciesMeta:
       '@uploadthing/mime-types':
         optional: true
     dependencies:
-      '@uploadthing/mime-types': 0.2.2
+      '@uploadthing/mime-types': 0.2.3
       std-env: 3.7.0
     dev: false
 
@@ -3455,8 +3455,8 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /lucide-react@0.323.0(react@18.2.0):
-    resolution: {integrity: sha512-rTXZFILl2Y4d1SG9p1Mdcf17AcPvPvpc/egFIzUrp7IUy60MUQo3Oi1mu8LGYXUVwuRZYsSMt3csHRW5mAovJg==}
+  /lucide-react@0.331.0(react@18.2.0):
+    resolution: {integrity: sha512-CHFJ0ve9vaZ7bB2VRAl27SlX1ELh6pfNC0jS96qGpPEEzLkLDGq4pDBFU8RhOoRMqsjXqTzLm9U6bZ1OcIHq7Q==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -5148,14 +5148,33 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /uploadthing@6.3.3:
-    resolution: {integrity: sha512-YYHgh6YUKNySRW6P6FrCjrbs3TUxydtRzpL4mmhTwYoaP30gc0Uf9LWygPl4bSQJ/1zkBmdSBbZpYdg4VV/NJw==}
+  /uploadthing@6.4.0(next@14.0.4)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-qGK6e8Y58a3nBCTZCk/dJZiGhKHhtz752khZ41Fa7D+s5trNLVWwNfs9f6KKMC5uj2GIttmFUntBt1VtPTKPYQ==}
     engines: {node: '>=18.13.0'}
+    peerDependencies:
+      express: '*'
+      fastify: '*'
+      h3: '*'
+      next: '*'
+      tailwindcss: '*'
+    peerDependenciesMeta:
+      express:
+        optional: true
+      fastify:
+        optional: true
+      h3:
+        optional: true
+      next:
+        optional: true
+      tailwindcss:
+        optional: true
     dependencies:
-      '@uploadthing/mime-types': 0.2.2
-      '@uploadthing/shared': 6.2.1(@uploadthing/mime-types@0.2.2)
+      '@uploadthing/mime-types': 0.2.3
+      '@uploadthing/shared': 6.3.0(@uploadthing/mime-types@0.2.3)
       consola: 3.2.3
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       std-env: 3.7.0
+      tailwindcss: 3.4.1
     dev: false
 
   /uri-js@4.4.1:
