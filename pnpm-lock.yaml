@@ -72,8 +72,8 @@ dependencies:
     specifier: ^10.43.6
     version: 10.45.0
   '@uploadthing/react':
-    specifier: ^6.2.2
-    version: 6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.3)
+    specifier: ^6.2.3
+    version: 6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.3.3)
   ai:
     specifier: ^2.2.35
     version: 2.2.35(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
@@ -2042,19 +2042,29 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
-  /@uploadthing/dropzone@0.1.1:
-    resolution: {integrity: sha512-ohlnFQfNr/UmImfipVo4uiBj1HQL7dp/sWBD96iAajc6RaQuYnHATGaSaISpCjZTeoLkksuu4/LR8vU9nSzpvQ==}
+  /@uploadthing/dropzone@0.1.2(react@18.2.0)(solid-js@1.8.11):
+    resolution: {integrity: sha512-wV074/Vu6WIpqtaLUZI8V/IU+WrcOh/PlwBnRPpnz0JmxNDruDeKcIw2nAOcYVdnX2/oZWTvx+un4WYz/l9P4Q==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      solid-js: ^1.7.11
+    peerDependenciesMeta:
+      react:
+        optional: true
+      solid-js:
+        optional: true
     dependencies:
       attr-accept: 2.2.2
       file-selector: 0.6.0
+      react: 18.2.0
+      solid-js: 1.8.11
     dev: false
 
   /@uploadthing/mime-types@0.2.2:
     resolution: {integrity: sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==}
     dev: false
 
-  /@uploadthing/react@6.2.2(next@14.0.4)(react@18.2.0)(uploadthing@6.3.3):
-    resolution: {integrity: sha512-fDfVooLTbC5/FM1o/chPDf5i8DRxCOeRSuRl0R6yh/jIHTdDO2kwXeM5DTaBazJmaEabh5GB+I9Rwg8nU0QdVA==}
+  /@uploadthing/react@6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.3.3):
+    resolution: {integrity: sha512-hUnPDHQBPykcAisHqIhGaOi7BU9tjE6EP4hyXnaeVsUeWGh8VTED5+ofYiulelCwBYv+/8mDOJ9nj5WU0v6FIg==}
     peerDependencies:
       next: '*'
       react: ^17.0.2 || ^18.0.0
@@ -2063,8 +2073,8 @@ packages:
       next:
         optional: true
     dependencies:
-      '@uploadthing/dropzone': 0.1.1
-      '@uploadthing/shared': 6.2.0
+      '@uploadthing/dropzone': 0.1.2(react@18.2.0)(solid-js@1.8.11)
+      '@uploadthing/shared': 6.3.0
       attr-accept: 2.2.2
       file-selector: 0.6.0
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -2073,17 +2083,7 @@ packages:
       uploadthing: 6.3.3
     transitivePeerDependencies:
       - '@uploadthing/mime-types'
-    dev: false
-
-  /@uploadthing/shared@6.2.0:
-    resolution: {integrity: sha512-GMC1gwZa9X48RZwuY7gGse7E8TXYMAMUNaYWEQL2ctVhMZv7viCPyMyZ0yMqBsQmOeGfbmycPnUeNE9IuesJGg==}
-    peerDependencies:
-      '@uploadthing/mime-types': ^0.2.2
-    peerDependenciesMeta:
-      '@uploadthing/mime-types':
-        optional: true
-    dependencies:
-      std-env: 3.7.0
+      - solid-js
     dev: false
 
   /@uploadthing/shared@6.2.1(@uploadthing/mime-types@0.2.2):
@@ -2095,6 +2095,17 @@ packages:
         optional: true
     dependencies:
       '@uploadthing/mime-types': 0.2.2
+      std-env: 3.7.0
+    dev: false
+
+  /@uploadthing/shared@6.3.0:
+    resolution: {integrity: sha512-IXh/Y8v3JUEPb+n9e92X37hZywqjDJsOq8rrfKhZRmB6bMJNJncHz3X4fqofexDB96dmB8KwizdRYTQAxZvYQg==}
+    peerDependencies:
+      '@uploadthing/mime-types': ^0.2.2
+    peerDependenciesMeta:
+      '@uploadthing/mime-types':
+        optional: true
+    dependencies:
       std-env: 3.7.0
     dev: false
 
