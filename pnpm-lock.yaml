@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.0.14
     version: 0.0.14
   '@mantine/hooks':
-    specifier: ^7.5.2
-    version: 7.5.2(react@18.2.0)
+    specifier: ^7.5.3
+    version: 7.5.3(react@18.2.0)
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@5.9.1)(next-auth@4.24.6)
@@ -73,7 +73,7 @@ dependencies:
     version: 10.45.0
   '@uploadthing/react':
     specifier: ^6.2.3
-    version: 6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.3.3)
+    version: 6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.4.0)
   ai:
     specifier: ^2.2.35
     version: 2.2.35(react@18.2.0)(solid-js@1.8.11)(svelte@4.2.8)(vue@3.4.14)
@@ -947,8 +947,8 @@ packages:
       - encoding
     dev: false
 
-  /@mantine/hooks@7.5.2(react@18.2.0):
-    resolution: {integrity: sha512-4POujH5Xx84VB/xfM6EttDq725dqqL2DntoeMjHz3Ua94aK5Y0VSc1IwlETxCuF7yNV5/w/Z8kgeVVa5cDgrPg==}
+  /@mantine/hooks@7.5.3(react@18.2.0):
+    resolution: {integrity: sha512-mFI448mAs12v8FrgSVhytqlhTVrEjIfd/PqPEfwJu5YcZIq4YZdqpzJIUbANnRrFSvmoQpDb1PssdKx7Ds35hw==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
@@ -2059,7 +2059,7 @@ packages:
     resolution: {integrity: sha512-K2KVt90PdEZqGQ74tUXMCOFCUPzk5UUItCHHBd6+bC3QC8b/D9glORqVl6VI4a/EbnU9rHVJuXGHWsvoyM44sg==}
     dev: false
 
-  /@uploadthing/react@6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.3.3):
+  /@uploadthing/react@6.2.3(next@14.0.4)(react@18.2.0)(solid-js@1.8.11)(uploadthing@6.4.0):
     resolution: {integrity: sha512-hUnPDHQBPykcAisHqIhGaOi7BU9tjE6EP4hyXnaeVsUeWGh8VTED5+ofYiulelCwBYv+/8mDOJ9nj5WU0v6FIg==}
     peerDependencies:
       next: '*'
@@ -2070,7 +2070,7 @@ packages:
         optional: true
     dependencies:
       '@uploadthing/dropzone': 0.1.2(react@18.2.0)(solid-js@1.8.11)
-      '@uploadthing/shared': 6.3.0
+      '@uploadthing/shared': 6.3.0(@uploadthing/mime-types@0.2.3)
       attr-accept: 2.2.2
       file-selector: 0.6.0
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -2082,19 +2082,7 @@ packages:
       - solid-js
     dev: false
 
-  /@uploadthing/shared@6.2.1(@uploadthing/mime-types@0.2.2):
-    resolution: {integrity: sha512-g/BHzRDuz7f97lEO4VR6PPIQ61YDp9sZWbohI1qi/Nts+bL6it1PyBKyQXIf9glhtfGoFO9Izb1jayO7wmxJkw==}
-    peerDependencies:
-      '@uploadthing/mime-types': ^0.2.2
-    peerDependenciesMeta:
-      '@uploadthing/mime-types':
-        optional: true
-    dependencies:
-      '@uploadthing/mime-types': 0.2.2
-      std-env: 3.7.0
-    dev: false
-
-  /@uploadthing/shared@6.3.0:
+  /@uploadthing/shared@6.3.0(@uploadthing/mime-types@0.2.3):
     resolution: {integrity: sha512-IXh/Y8v3JUEPb+n9e92X37hZywqjDJsOq8rrfKhZRmB6bMJNJncHz3X4fqofexDB96dmB8KwizdRYTQAxZvYQg==}
     peerDependencies:
       '@uploadthing/mime-types': ^0.2.2
@@ -2102,6 +2090,7 @@ packages:
       '@uploadthing/mime-types':
         optional: true
     dependencies:
+      '@uploadthing/mime-types': 0.2.3
       std-env: 3.7.0
     dev: false
 
