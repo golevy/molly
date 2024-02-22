@@ -71,7 +71,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.0",
     "@types/bcrypt": "^5.0.2",
-    "@types/eslint": "^8.56.2",
+    "@types/eslint": "^8.56.3",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
