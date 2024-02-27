@@ -90,8 +90,8 @@ dependencies:
     specifier: ^3.3.1
     version: 3.3.1
   langchain:
-    specifier: ^0.1.21
-    version: 0.1.21(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1)
+    specifier: ^0.1.22
+    version: 0.1.22(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1)
   lucide-react:
     specifier: ^0.341.0
     version: 0.341.0(react@18.2.0)
@@ -633,6 +633,23 @@ packages:
 
   /@langchain/core@0.1.32:
     resolution: {integrity: sha512-7b8wBQMej2QxaDDS0fCQa3/zrA2raTh1RBe2h1som7QxFpWJkHSxwVwdvGUotX9SopmsY99TK54sK0amfDvBBA==}
+    engines: {node: '>=18'}
+    dependencies:
+      ansi-styles: 5.2.0
+      camelcase: 6.3.0
+      decamelize: 1.2.0
+      js-tiktoken: 1.0.8
+      langsmith: 0.1.1
+      ml-distance: 4.0.1
+      p-queue: 6.6.2
+      p-retry: 4.6.2
+      uuid: 9.0.1
+      zod: 3.22.4
+      zod-to-json-schema: 3.22.3(zod@3.22.4)
+    dev: false
+
+  /@langchain/core@0.1.34:
+    resolution: {integrity: sha512-b5tGxCwsO2Q4BNgN1Vm6v0SgxXYabR886nLMM+UNw+FBWkb6Pmz1vZFH+2fRZ7da1vPLBMEc9JtSK0Xgegk5vQ==}
     engines: {node: '>=18'}
     dependencies:
       ansi-styles: 5.2.0
@@ -2863,8 +2880,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /langchain@0.1.21(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1):
-    resolution: {integrity: sha512-OOcCFIgx23WyyNS1VJBLbC3QL5plQBVfp2drXw1OJAarZ8yEY3cgJq8NbTY37sMnLoJ2olFEzMuAOdlTur4cwQ==}
+  /langchain@0.1.22(@pinecone-database/pinecone@2.0.1)(pdf-parse@1.1.1):
+    resolution: {integrity: sha512-VeHN1XtgFRZakeVzbWyTUb01qOwBIV14P5kHRtVkd9vnIAqVlfz6hTXI3zxL1b0S6F1N5Zu2ZEE6R4GkMGn0rA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@aws-sdk/client-s3': ^3.310.0
@@ -3024,7 +3041,7 @@ packages:
     dependencies:
       '@anthropic-ai/sdk': 0.9.1
       '@langchain/community': 0.0.32(@pinecone-database/pinecone@2.0.1)
-      '@langchain/core': 0.1.32
+      '@langchain/core': 0.1.34
       '@langchain/openai': 0.0.14
       '@pinecone-database/pinecone': 2.0.1
       binary-extensions: 2.2.0
