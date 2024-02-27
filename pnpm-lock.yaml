@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.0.14
     version: 0.0.14
   '@mantine/hooks':
-    specifier: ^7.6.0
-    version: 7.6.0(react@18.2.0)
+    specifier: ^7.6.1
+    version: 7.6.1(react@18.2.0)
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@5.10.2)(next-auth@4.24.6)
@@ -678,8 +678,8 @@ packages:
       - encoding
     dev: false
 
-  /@mantine/hooks@7.6.0(react@18.2.0):
-    resolution: {integrity: sha512-TUYM1uC2bF2DkkOfL8/fQQuwrNPQufg5H2uYoV9WaPyWtR+MlZs8UgbucVpOD2dEdVJjkfPOcQfi8Wim0gktmw==}
+  /@mantine/hooks@7.6.1(react@18.2.0):
+    resolution: {integrity: sha512-zsOGzFRcQZuER2rzAjfrAqp98W7WCFA43nF1QZUKV7AHTq8q1mtr3DOhFfO3/CA+t1lai68gp1guVcIhP4lrwQ==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
