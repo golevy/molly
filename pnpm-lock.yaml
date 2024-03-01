@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.0.33
     version: 0.0.33(@pinecone-database/pinecone@2.0.1)
   '@langchain/openai':
-    specifier: ^0.0.14
-    version: 0.0.14
+    specifier: ^0.0.15
+    version: 0.0.15
   '@mantine/hooks':
     specifier: ^7.6.1
     version: 7.6.1(react@18.2.0)
@@ -1152,15 +1152,15 @@ packages:
       - encoding
     dev: false
 
-  /@langchain/core@0.1.17:
-    resolution: {integrity: sha512-PNmQgyAsDFm3DsZD+Djmm+sxH8xTGMlAryhYNgTg1Wkvhh+ztCqcVVYAv+aWch8CM56FBYMD8Guq0TJuRJJxEA==}
+  /@langchain/core@0.1.32:
+    resolution: {integrity: sha512-7b8wBQMej2QxaDDS0fCQa3/zrA2raTh1RBe2h1som7QxFpWJkHSxwVwdvGUotX9SopmsY99TK54sK0amfDvBBA==}
     engines: {node: '>=18'}
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.8
-      langsmith: 0.0.59
+      langsmith: 0.1.1
       ml-distance: 4.0.1
       p-queue: 6.6.2
       p-retry: 4.6.2
@@ -1207,7 +1207,20 @@ packages:
     resolution: {integrity: sha512-co6nRylPrLGY/C3JYxhHt6cxLq07P086O7K3QaZH7SFFErIN9wSzJonpvhZR07DEUq6eK6wKgh2ORxA/NcjSRQ==}
     engines: {node: '>=18'}
     dependencies:
-      '@langchain/core': 0.1.17
+      '@langchain/core': 0.1.34
+      js-tiktoken: 1.0.8
+      openai: 4.28.0
+      zod: 3.22.4
+      zod-to-json-schema: 3.22.3(zod@3.22.4)
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@langchain/openai@0.0.15:
+    resolution: {integrity: sha512-ILecml9YopmQxfpaquYEG+KfEz7svJqpcla671J1tVngqtPwRqg9PLUOa2eDrPsunScxKUeLd8HjAGLd/eaefQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@langchain/core': 0.1.39
       js-tiktoken: 1.0.8
       openai: 4.28.0
       zod: 3.22.4
@@ -3665,8 +3678,8 @@ packages:
     resolution: {integrity: sha512-Woyb8YDHgqqTOZvWIbm2CaFDGfZ4NTSyXV687AG4vXEfoNo7cGQp7nhl7wL3ehenKWmNEmcxCLgOZzW8jE6lOQ==}
     dev: false
 
-  /langsmith@0.0.59:
-    resolution: {integrity: sha512-ZnlSMxDaBGcKuyenooISzxuAzwCAjgEwefF0gx4d8nJ5XwaF+IZlLMxDlnt1rnomeofF7kNRoLYhpcIceUsuDw==}
+  /langsmith@0.1.1:
+    resolution: {integrity: sha512-SY1J7Y/hfcRby4ik5b2djvsTTlbJ76Mtl4Q2EDPznSKn+qMPMY2JVb3CroOHpA6qhXK/dGNbRLUz3Kq+mLmMsw==}
     hasBin: true
     dependencies:
       '@types/uuid': 9.0.7
@@ -3676,8 +3689,8 @@ packages:
       uuid: 9.0.1
     dev: false
 
-  /langsmith@0.1.1:
-    resolution: {integrity: sha512-SY1J7Y/hfcRby4ik5b2djvsTTlbJ76Mtl4Q2EDPznSKn+qMPMY2JVb3CroOHpA6qhXK/dGNbRLUz3Kq+mLmMsw==}
+  /langsmith@0.1.8:
+    resolution: {integrity: sha512-GMEPhUPmkOPUih2ho07kSMhHYpCDkavc6Zg0XgBjhLsYqYaobOxFFNyOc806jOvH2yw2tmiKLuiAdlQAVbDnHg==}
     hasBin: true
     dependencies:
       '@types/uuid': 9.0.7
