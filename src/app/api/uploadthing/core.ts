@@ -4,15 +4,17 @@ import { db } from "~/server/db";
 
 import { PDFLoader } from "langchain/document_loaders/fs/pdf";
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { PineconeStore } from "@langchain/community/vectorstores/pinecone";
+import { PineconeStore } from "@langchain/pinecone";
 import { getPineconeClient } from "~/lib/pinecone";
+
+const MAX_CONCURRENCY = 20;
 
 // Creating an instance of uploadthing
 const f = createUploadthing();
 
 export const ourFileRouter = {
   // File uploader handler, restricting to PDF files with a max size of 4MB
-  fileUploader: f({ pdf: { maxFileSize: "4MB" } })
+  fileUploader: f({ pdf: { maxFileSize: "128MB" } })
     // Middleware for handling request and user session validation
     .middleware(async ({ req }) => {
       // Retrieving user session
@@ -65,7 +67,7 @@ export const ourFileRouter = {
         // Using PineconeStore to create vectors and index from documents
         await PineconeStore.fromDocuments(pageLevelDocs, embeddings, {
           pineconeIndex,
-          maxConcurrency: 5, // Maximum number of batch requests to allow at once. Each batch is 1000 vectors.
+          maxConcurrency: MAX_CONCURRENCY, // Maximum number of batch requests to allow at once. Each batch is 1000 vectors.
           namespace: createdFile.id,
         });
 
