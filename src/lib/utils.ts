@@ -40,3 +40,13 @@ export const validateInputs = ({
 
   return true;
 };
+
+export const absoluteUrl = (path: string) => {
+  const baseUrl = process.env.NEXTAUTH_URL
+    ? process.env.NEXTAUTH_URL
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : `http://localhost:${process.env.PORT ?? 3000}`;
+
+  return `${baseUrl}${path}`;
+};
