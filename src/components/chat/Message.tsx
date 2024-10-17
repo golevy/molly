@@ -88,4 +88,6 @@ const Message = React.forwardRef<HTMLDivElement, MessageProps>(
   },
 );
 
+Message.displayName = "Message";
+
 export default Message;

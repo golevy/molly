@@ -16,7 +16,7 @@ import { cn } from "~/lib/utils";
 import { useRouter } from "next/navigation";
 import UpgradeButton from "~/components/UpgradeButton";
 
-const page = () => {
+const PricingPage = () => {
   const router = useRouter();
   const { data: session } = useSession();
   const user = session?.user;
@@ -173,4 +173,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PricingPage;
